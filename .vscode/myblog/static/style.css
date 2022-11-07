@@ -1,0 +1,128 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+section {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+
+    transition: all 0.3s linear;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #3e4684;
+    text-transform: capitalize;
+}
+
+.container {}
+
+.navLink {
+    margin: 1rem;
+    padding: 35px;
+}
+
+.navLink a {
+    text-decoration: none;
+    padding: 2px;
+    font-weight: 700;
+    font-size: 21px;
+    margin: 2rem;
+    margin-bottom: 100px;
+    color: blue;
+}
+
+.navLink a:hover,
+.navLink a:active {
+    border-bottom: 7px solid lightblue;
+    transition: all 0.3s linear;
+}
+
+.log {
+    border: 2px solid #fff;
+    background-color: #ffff;
+    outline: none;
+    border-radius: 2px;
+    margin: 2rem;
+    padding: 10px;
+}
+
+.log a {
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    margin: 21px;
+    font-size: 2rem;
+}
+
+.header {
+    display: grid;
+    place-content: center;
+    margin-top: 2rem;
+    padding: 30px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 3px 10px;
+
+}
+
+.blogstant {
+    border: 2px solid #f5f8f3;
+    padding: 10px;
+}
+
+.context {
+    background-color: red;
+    padding: 10px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    text-transform: capitalize;
+    padding: 10px;
+    word-spacing: 9px;
+    font-size: 2rem
+}
+
+.placed {
+    display: flex;
+    justify-content: space-between;
+}
+.placed p {
+    text-align: center;
+    text-transform: capitalize;
+}
+.placed span {
+    text-transform: capitalize;
+    font-size: 20px;
+}
+
+
+
+.scroll {
+    border: 2px solid #333;
+    overflow-y: scroll;
+    height: 400px;
+    text-align: justify;
+    padding: 20px;
+    width: 100%;
+    font-size: 20px;
+    word-spacing: 6px;
+    background-color: #fff;
+}
+
+.scroll::-webkit-scrollbar {
+    width: 5px;
+}
+
+.scroll::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    width: 5px;
+}
