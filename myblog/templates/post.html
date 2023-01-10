@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+{{ super() }}
+    <h1>{{ post.title }}</h1>
+    <article class="media content-section">
+        <div class="media-body">
+            <div class="article-metadata">
+                <a class="mr-2" href="#">{{ post.author.username }}</a>
+                <small class="text-muted">{{ post.date_posted }}</small>
+            </div>
+            <p class="article-content">{{ post.content }}</p>
+        </div>
+    </article>
+    {% if current_user.email == post.author.email %}
+        <a class="btn btn-outline-info" href="/post/{{ post.id }}/update">Edit</a>
+    {% endif %}
+{% endblock content %}

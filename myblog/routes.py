@@ -5,13 +5,13 @@ from flask import render_template, url_for, flash, redirect, request, abort
 from myblog import app, db, bcrypt
 from myblog.forms import RegistrationForm, LoginForm, UpdateAccountForm, PostForm
 from myblog.model import User, Post
+from sqlalchemy import desc
 from flask_login import login_user, current_user, logout_user, login_required
 
-
 @app.route("/")
-@app.route("/home")
+@app.route("/home", )
 def home():
-    posts = Post.query.all()
+    posts = Post.query.order_by(desc(Post.date_posted)).all()
     return render_template('home.html', posts=posts)
 
 
@@ -109,7 +109,7 @@ def new_post():
 @app.route("/post/<int:post_id>")
 def post(post_id):
     post = Post.query.get_or_404(post_id)
-    return render_template('post.html', title=post.title, post=post)
+    return render_template('post.html', post=post)
 
 
 @app.route("/post/<int:post_id>/update", methods=['GET', 'POST'])
